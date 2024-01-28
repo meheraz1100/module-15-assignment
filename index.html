@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Images/program1-rounded.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7d23077085.js" crossorigin="anonymous"></script>
+    <style>
+        .manrope {
+            font-family: "Manrope", sans-serif;
+            font-optical-sizing: auto;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/5bd66e3169.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Hockey Club</title>
+</head>
+
+<body class="max-w-7xl py-4 px-10 mx-auto">
+    <!-- header section  -->
+    <header>
+        <!-- navbar  -->
+        <div class="navbar my-6 bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-xl">
+                        <li><a>Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#pages">Pages</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li title="theme-controller"><label class="swap swap-rotate">
+  
+                            <!-- this hidden checkbox controls the state -->
+                            <input type="checkbox" class="theme-controller" value="synthwave" />
+                            
+                            <!-- sun icon -->
+                            <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+                            
+                            <!-- moon icon -->
+                            <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+                            
+                          </label></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-black font-extrabold text-4xl">Hockey<span
+                        class="text-orange-600">'</span>s</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-xl">
+                    <li><a>Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#pages">Pages</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li title="theme-controller"><label class="swap swap-rotate">
+  
+                        <!-- this hidden checkbox controls the state -->
+                        <input type="checkbox" class="theme-controller" value="synthwave" />
+                        
+                        <!-- sun icon -->
+                        <svg class="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+                        
+                        <!-- moon icon -->
+                        <svg class="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+                        
+                      </label></li>
+                </ul>
+            </div>
+            <div class="navbar-end space-x-6">
+                <div class="hidden lg:flex items-center text-[#89898B]">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <a class="btn text-white px-7 bg-orange-600">Get Ticket</a>
+            </div>
+        </div>
+        <!-- banner  -->
+        <div class="relative">
+            <div class="relative carousel rounded-md w-full">
+                <!-- card one  -->
+                <div id="slide1" class="carousel-item relative w-full  h-[50vh]">
+                    <img src="./Images/1.png" class="bg-center bg-cover w-full" />
+                    <div class="absolute  transform -translate-y-1/2 left-10 bottom-10 space-x-4">
+                        <a href="#slide4" class="btn bg-black text-white btn-circle">❮</a>
+                        <a href="#slide2" class="btn  bg-black text-white btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- card two  -->
+                <div id="slide2" class="carousel-item relative w-full  h-[50vh]">
+                    <img src="./Images/2.jpg" class="bg-center bg-cover w-full" />
+                    <div class="absolute  transform -translate-y-1/2 left-10 bottom-10 space-x-4">
+                        <a href="#slide1" class="btn bg-black text-white btn-circle">❮</a>
+                        <a href="#slide3" class="btn  bg-black text-white btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- card three  -->
+                <div id="slide3" class="carousel-item relative w-full h-[50vh]">
+                    <img src="./Images/3.jpg" class="bg-center bg-cover w-full" />
+                    <div class="absolute  transform -translate-y-1/2 left-10 bottom-10 space-x-4">
+                        <a href="#slide2" class="btn bg-black text-white btn-circle">❮</a>
+                        <a href="#slide4" class="btn  bg-black text-white btn-circle">❯</a>
+                    </div>
+                </div>
+                <!-- card four -->
+                <div id="slide4" class="carousel-item relative w-full h-[50vh]">
+                    <img src="./Images/4.jpg" class="bg-center bg-cover w-full" />
+                    <div class="absolute  transform -translate-y-1/2 left-10 bottom-10 space-x-4">
+                        <a href="#slide3" class="btn bg-black text-white btn-circle">❮</a>
+                        <a href="#slide1" class="btn  bg-black text-white btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="absolute flex flex-col items-start justify-center bg-black rounded-md max-w-xl max-h-full lg:translate-x-3/4 lg:-translate-y-48 lg:mx-36">
+                <h2 class="text-white p-2 text-xl lg:px-4 lg:my-2 lg:ms-8 lg:text-2xl font-extrabold">
+                    Meet all the heroes from the field
+                </h2>
+                <p class="text-white p-2 lg:ms-8 font-semibold lg:px-4 lg:py-5 text-[rgba(255, 255, 255, 0.10)]">You can
+                    know
+                    our all
+                    heros to
+                    explore here and you can enjoy with in this
+                    field.
+                    If you are interst let us know we will help you to our best. So, don't be affraid </p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Professional section -->
+        <section class="mt-60 lg:mt-20" id="blog">
+            <div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+                <div class="my-3 lg:my-10">
+                    <h2 class="text-black text-3xl font-bold text-center">Professional Hockeys Club</h2>
+                    <p class="text-center text-[#13131899]">We train our member professionally. Our member are very much
+                        expert. <br> They teach many people.</p>
+                </div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 lg:grid-cols-4 space-x-5">
+                <div class="p-5 flex flex-col items-center justify-center">
+                    <div class="radial-progress rotate-90 text-[#FF4240]" style=" --value:87;" role="progressbar">
+                        <span class="text-black -rotate-90 font-bold">87%</span>
+                    </div>
+                    <h3 class="text-lg my-3 font-bold">Prayer Facility</h3>
+                    <p class="text-center">Your progress is nearlly finished. So, be ready for start.</p>
+                </div>
+                <div class="p-5 flex flex-col items-center justify-center">
+                    <div class="radial-progress rotate-90  text-[#49D293]" style=" --value:95;" role="progressbar">
+                        <span class="text-black -rotate-90 font-bold">95%</span>
+                    </div>
+                    <h3 class="text-lg my-3 font-bold">Experienced Coach</h3>
+                    <p class="text-center">Your progress is nearlly finished. So, be ready for start.</p>
+                </div>
+                <div class="p-5 flex flex-col items-center justify-center">
+                    <div class="radial-progress rotate-90  text-[#FFB546]" style=" --value:90;" role="progressbar">
+                        <span class="text-black -rotate-90 font-bold">90%</span>
+                    </div>
+                    <h3 class="text-lg my-3 font-bold">Senior Player</h3>
+                    <p class="text-center">Your progress is nearlly finished. So, be ready for start.</p>
+                </div>
+                <div class="p-5 flex flex-col items-center justify-center">
+                    <div class="radial-progress rotate-90 text-[#4C8DF1]" style=" --value:80;" role="progressbar">
+                        <span class="text-black -rotate-90 font-bold">80%</span>
+                    </div>
+                    <h3 class="text-lg my-3 font-bold">Training Ground</h3>
+                    <p class="text-center">Your progress is nearlly finished. So, be ready for start.</p>
+                </div>
+            </div>
+        </section>
+        <!-- program section  -->
+        <section id="pages">
+            <div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+                <div class="my-3 lg:my-10">
+                    <h2 class="text-black text-3xl font-bold text-center">Program Sections</h2>
+                    <p class="text-center text-[#13131899]">Our All members are very professional and they are fully dedicated for teaching<br> They teach many people.</p>
+                </div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+            </div>
+            <!-- card section  -->
+            <div class="my-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- first  -->
+                <div
+                    class="flex flex-col items-start justify-center px-10 bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url('./Images/program1.png')] w-full bg-cover bg-center h-[50vh] rounded-lg">
+                    <h2 class="font-extrabold text-xl text-white">Junior Program</h2>
+                    <p class="text-white my-2">
+                      Junior Program Junior ProgramJunior ProgramJunior ProgramJunior ProgramJunior ProgramJunior ProgramJunior ProgramJunior 
+                    </p>
+                    <button class="btn btn-wide  bg-[#FF4240] text-white border-none">Register Now</button>
+                </div>
+                <!-- second  -->
+                <div
+                    class="flex flex-col items-start justify-center px-10 bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url('./Images/program2.png')] w-full bg-cover bg-center h-[50vh] rounded-lg">
+                    <h2 class="font-extrabold text-xl text-white">Teenager Program</h2>
+                    <p class="text-white my-2">
+                        Teenager ProgramTeenager ProgramTeenager ProgramTeenager ProgramTeenager ProgramTeenager Program
+                    </p>
+                    <button class="btn btn-wide  bg-[#FF4240] border-none text-white">Register Now</button>
+                </div>
+                <!-- third  -->
+                <div
+                    class="flex flex-col items-start justify-center px-10 bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url('./Images/program3.png')] w-full bg-cover bg-center h-[50vh] rounded-lg lg:col-span-2 lg:justify-end lg:pb-10">
+                    <h2 class="font-extrabold text-xl text-white">Professional Program</h2>
+                    <p class=" text-white my-2">
+                        Professional ProgramProfessional ProgramProfessional <br> ProgramProfessional ProgramProfessional Program
+                    </p>
+                    <button class="btn btn-wide border-none bg-[#FF4240] text-white">Register Now</button>
+                </div>
+            </div>
+        </section>
+        <!-- product section  -->
+        <section>
+            <div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+                <div class="my-3 lg:my-10">
+                    <h2 class="text-black text-3xl font-bold text-center">Our New Products</h2>
+                    <p class="text-center text-[#13131899]">We train our member professionally. Our member are very much
+                        expert. <br> They teach many people.</p>
+                </div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+            </div>
+            <div class="my-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
+                <!-- product-1  -->
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 border border-[rgba(19, 19, 24, 0.10)] rounded-lg items-center">
+                    <div class="p-8 rounded-lg">
+                        <img class="bg-cover bg-center w-full" src="./Images/5.png" alt="">
+                    </div>
+                    <div class="p-8 lg:p-0 lg:me-4">
+                        <div class="mb-2 grid grid-cols-3">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <p class="text-[#13131880]">5.0</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-solid text-[#13131880] fa-eye"></i>
+                                <p class="text-[#13131880]">20</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-regular text-[#13131880] fa-heart"></i>
+                                <p class="text-[#13131880]">200</p>
+                            </div>
+                        </div>
+                        <h3 class="text-[#131318] font-extrabold ">World Cup Winter Jackets</h3>
+                        <p class="my-4 text-[#13131880]">World Cup Winter JacketsWorld Cup Winter Jackets</p>
+                        <div class=" flex justify-between">
+                            <h3 class="text-[#FF4240] font-bold">Price-$22.00</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid text-[#13131880] fa-cart-flatbed-suitcase"></i>
+                                <p class="text-[#13131880]">Delivary Fee:Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product-2  -->
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 border border-[rgba(19, 19, 24, 0.10)] rounded-lg items-center">
+                    <div class="p-8 rounded-lg">
+                        <img class="bg-cover bg-center w-full" src="./Images/6.png" alt="">
+                    </div>
+                    <div class="p-8 lg:p-0 lg:me-4">
+                        <div class="mb-2 grid grid-cols-3">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <p class="text-[#13131880]">5.0</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-solid text-[#13131880] fa-eye"></i>
+                                <p class="text-[#13131880]">20</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-regular text-[#13131880] fa-heart"></i>
+                                <p class="text-[#13131880]">200</p>
+                            </div>
+                        </div>
+                        <h3 class="text-[#131318] font-extrabold ">World Cup special football</h3>
+                        <p class="my-4 text-[#13131880]">World Cup special football World Cup special football</p>
+                        <div class=" flex justify-between">
+                            <h3 class="text-[#FF4240] font-bold">Price-$22.00</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid text-[#13131880] fa-cart-flatbed-suitcase"></i>
+                                <p class="text-[#13131880]">Delivary Fee:Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product-3  -->
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 border border-[rgba(19, 19, 24, 0.10)] rounded-lg items-center">
+                    <div class="p-8 rounded-lg">
+                        <img class="bg-cover bg-center w-full" src="./Images/7.png" alt="">
+                    </div>
+                    <div class="p-8 lg:p-0 lg:me-4">
+                        <div class="mb-2 grid grid-cols-3">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <p class="text-[#13131880]">5.0</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-solid text-[#13131880] fa-eye"></i>
+                                <p class="text-[#13131880]">20</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-regular text-[#13131880] fa-heart"></i>
+                                <p class="text-[#13131880]">200</p>
+                            </div>
+                        </div>
+                        <h3 class="text-[#131318] font-extrabold ">World Cup Special Cap</h3>
+                        <p class="my-4 text-[#13131880]">World Cup Special Cap World Cup Special Cap</p>
+                        <div class=" flex justify-between">
+                            <h3 class="text-[#FF4240] font-bold">Price-$22.00</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid text-[#13131880] fa-cart-flatbed-suitcase"></i>
+                                <p class="text-[#13131880]">Delivary Fee:Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product-4  -->
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 border border-[rgba(19, 19, 24, 0.10)] rounded-lg items-center">
+                    <div class="p-8 rounded-lg">
+                        <img class="bg-cover bg-center w-full" src="./Images/8.png" alt="">
+                    </div>
+                    <div class="p-8 lg:p-0 lg:me-4">
+                        <div class="mb-2 grid grid-cols-3">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <p class="text-[#13131880]">5.0</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-solid text-[#13131880] fa-eye"></i>
+                                <p class="text-[#13131880]">20</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-regular text-[#13131880] fa-heart"></i>
+                                <p class="text-[#13131880]">200</p>
+                            </div>
+                        </div>
+                        <h3 class="text-[#131318] font-extrabold ">World Cup Special Jercy</h3>
+                        <p class="my-4 text-[#13131880]">World Cup Special Jercy World Cup Special Jercy</p>
+                        <div class=" flex justify-between">
+                            <h3 class="text-[#FF4240] font-bold">Price-$22.00</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid text-[#13131880] fa-cart-flatbed-suitcase"></i>
+                                <p class="text-[#13131880]">Delivary Fee:Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product-5  -->
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 border border-[rgba(19, 19, 24, 0.10)] rounded-lg items-center">
+                    <div class="p-8 rounded-lg">
+                        <img class="bg-cover bg-center w-full" src="./Images/9.png" alt="">
+                    </div>
+                    <div class="p-8 lg:p-0 lg:me-4">
+                        <div class="mb-2 grid grid-cols-3">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <p class="text-[#13131880]">5.0</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-solid text-[#13131880] fa-eye"></i>
+                                <p class="text-[#13131880]">20</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-regular text-[#13131880] fa-heart"></i>
+                                <p class="text-[#13131880]">200</p>
+                            </div>
+                        </div>
+                        <h3 class="text-[#131318] font-extrabold ">Helmet For Sports</h3>
+                        <p class="my-4 text-[#13131880]">Helmet For Sports Helmet For Sports Helmet For Sports</p>
+                        <div class=" flex justify-between">
+                            <h3 class="text-[#FF4240] font-bold">Price-$22.00</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid text-[#13131880] fa-cart-flatbed-suitcase"></i>
+                                <p class="text-[#13131880]">Delivary Fee:Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product-6  -->
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 border border-[rgba(19, 19, 24, 0.10)] rounded-lg items-center">
+                    <div class="p-8 rounded-lg">
+                        <img class="bg-cover bg-center w-full" src="./Images/10.png" alt="">
+                    </div>
+                    <div class="p-8 lg:p-0 lg:me-4">
+                        <div class="mb-2 grid grid-cols-3">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-orange-500"></i>
+                                <p class="text-[#13131880]">5.0</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-solid text-[#13131880] fa-eye"></i>
+                                <p class="text-[#13131880]">20</p>
+                            </div>
+                            <div class="flex items-center gap-2"><i class="fa-regular text-[#13131880] fa-heart"></i>
+                                <p class="text-[#13131880]">200</p>
+                            </div>
+                        </div>
+                        <h3 class="text-[#131318] font-extrabold ">World Cup Special Football</h3>
+                        <p class="my-4 text-[#13131880]">World Cup Special Football World Cup Special Football</p>
+                        <div class=" flex justify-between">
+                            <h3 class="text-[#FF4240] font-bold">Price-$22.00</h3>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid text-[#13131880] fa-cart-flatbed-suitcase"></i>
+                                <p class="text-[#13131880]">Delivary Fee:Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- clints questions  -->
+        <section id="about">
+            <div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+                <div class="my-3 lg:my-10">
+                    <h2 class="text-black text-3xl font-bold text-center">Clients Question</h2>
+                    <p class="text-center text-[#13131899]">We train our member professionally. Our member are very much
+                        expert. <br> They teach many people.</p>
+                </div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 my-12 items-center gap-1">
+                <div>
+                    <img class="w-full px-8" src="./Images/11.png" alt="">
+                </div>
+                <div>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-xl font-medium">
+                            Our Equipments
+                        </div>
+                        <div class="collapse-content">
+                            <p>With 40 years of expertise in electronics equipment and installations, Air Liquide
+                                Electronics Systems (ALES) has
+                                developed a complete range of innovative fluid distribution equipment designed to meet
+                                the needs of the electronics
+                                industry, laboratories, and other industrial markets.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-xl font-medium">
+                            Hockey Training
+                        </div>
+                        <div class="collapse-content">
+                            <p>Discover a complete range of innovative fluid distribution equipment designed to meet the
+                                needs of the electronics
+                                industry, laboratories, and other industrial markets.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-xl font-medium">
+                            Private Lessons
+                        </div>
+                        <div class="collapse-content">
+                            <p>Chemical dispense systems are used to move chemicals from one place to another, and are
+                                the backbone of all wet
+                                processes in the fab.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-xl font-medium">
+                            Ski Touring
+                        </div>
+                        <div class="collapse-content">
+                            <p>Chemical dispense systems are used to move chemicals from one place to another, and are
+                                the backbone of all wet
+                                processes in the fab</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-xl font-medium">
+                            Booking
+                        </div>
+                        <div class="collapse-content">
+                            <p>Chemical dispense systems are used to move chemicals from one place to another, and are
+                                the backbone of all wet
+                                processes in the fab</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="collapse collapse-plus">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-xl font-medium">
+                            Pricings
+                        </div>
+                        <div class="collapse-content">
+                            <p>Chemical dispense systems are used to move chemicals from one place to another, and are
+                                the backbone of all wet
+                                processes in the fab</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </section>
+        <!-- get in touch  -->
+        <section id="contact">
+            <div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+                <div class="my-3 lg:my-10">
+                    <h2 class="text-black text-3xl font-bold text-center">Get In Touch</h2>
+                    <p class="text-center text-[#13131899]">We train our member professionally. Our member are very much
+                        expert. <br> They teach many people.</p>
+                </div>
+                <hr class="border-1 border-dashed border-[background: rgba(19, 19, 24, 0.20);]">
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 my-10 gap-6">
+                <div class="grid grid-cols-1 gap-5">
+                    <div class="bg-[#f8fcf0ff] rounded-lg px-4 h-[40vh] lg:h-[20vh] flex flex-col justify-center">
+                        <div>
+                            <img src="./Images/Group 1171275317.png" alt="">
+                            <p class="my-2">Phone Number</p>
+                            <h3 class="text-xl font-bold">(+62) 123-321-543</h3>
+                        </div>
+                    </div>
+                    <div class="bg-[#f8fcf0ff] rounded-lg px-4 h-[40vh] lg:h-[20vh] flex flex-col justify-center">
+                        <div>
+                            <img src="./Images/Group 1171275318.png" alt="">
+                            <p class="my-2">Email</p>
+                            <h3 class="text-xl font-bold">hockeys@support.com</h3>
+                        </div>
+                    </div>
+                    <div class="bg-[#f0f6ffff] rounded-lg h-[40vh] lg:h-[20vh] px-4 flex flex-col justify-center">
+                        <div>
+                            <img src="./Images/Group 1171275321.png" alt="">
+                            <p class="my-2">Location</p>
+                            <h3 class="text-xl font-bold">152/1 Mohakhali Wireless Gate</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:mx-14 col-span-2">
+                    <div class="grid gap-5 grid-cols-1 lg:grid-cols-2 justify-center">
+                        <div>
+                            <h1 class="font-bold">Your Name</h1>
+                            <input type="text" placeholder="Enter your name" class="input input-bordered w-full"
+                                 />
+                        </div>
+                        <div>
+                            <h1 class="font-bold">Your Email</h1>
+                            <input type="text" placeholder="Enter Your Email" class="input input-bordered w-full "
+                                />
+                        </div>
+                        <div>
+                            <h1 class="font-bold">Subject</h1>
+                            <input type="text" placeholder="Enter your Subject" class="input input-bordered w-full "
+                                />
+                        </div>
+                        <div>
+                            <h1 class="font-bold">Phone Number</h1>
+                            <input type="text" placeholder="Enter Your Phone Number" class="input input-bordered w-full"
+                                 />
+                        </div>
+                    </div>
+                    <div class="mt-5 col-span-2">
+                        <h2 class="font-bold">Message</h2>
+                        <textarea class="textarea w-full h-[36vh]" placeholder="Write Your Message..." ></textarea>
+                        <button class=" mt-5 btn btn-wide w-full text-white bg-orange-700 border-none">Send
+                            Messege</button>
+                    </div>
+                </div>
+            </div>
+            <div class="my-10
+            bg-[#f7f7f7ff] rounded-lg">
+                <div class="py-10">
+                    <h2 class="font-extrabold text-center text-xl">Social Media</h2>
+                    <div class="text-center space-x-3 my-5">
+                        <i class="fa-brands fa-twitter fa-2xl"></i>
+                        <i class="fa-brands fa-facebook fa-2xl"></i>
+                        <i class="fa-brands fa-instagram fa-2xl"></i>
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-black w-full">
+        <div class="p-5 lg:p-32 grid grid-cols-1 lg:flex gap-10 justify-around">
+            <div class="text-center lg:text-start text-white lg:flex flex-col">
+                <h2 class="text-xl font-bold">Get In Touch</h2>
+                <p class="my-4">Hockey Club Hockey Club Hockey Club<br>Hockey ClubHockey Club  <br>Hockey Club.</p>
+                <div>
+                    <div class="text-center lg:text-start">
+                        <i class="fa-regular text-orange-500 fa-envelope"></i>
+                        hockeys@support.com
+                    </div>
+                    <div class="text-center lg:text-start">
+                        <i class="fa-solid text-orange-500 fa-phone"></i>
+                        (+62) 123-321-543
+                    </div>
+                </div>
+            </div>
+            <div class="text-center lg:text-start text-white grid grid-cols-2 gap-20">
+                <div>
+                    <h3 class="text-xl font-bold my-3">Company</h3>
+                    <p>About Us</p>
+                    <p>Leadership</p>
+                    <p>Career</p>
+                    <p>News & Article</p>
+                    <p>Legal Notice</p>
+
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold my-3">Support</h3>
+                    <p>Help Center</p>
+                    <p>FAQ</p>
+                    <p>Target Support</p>
+                    <p>Contuct Us</p>
+                </div>
+            </div>
+            <div class="text-center lg:text-start text-white">
+                <h3 class="text-xl font-bold my-3">Service</h3>
+                <p>Academy</p>
+                <p>Group Lesson</p>
+                <p>Private Lesson</p>
+                <p>Hockeys for kids</p>
+                <p>Hockeys for kids</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
